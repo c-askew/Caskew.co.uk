@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="A portfolio website for Cameron Askew, a student of Web Production at Teesside University.">
+  <title>Cameron Askew - Web Production BSc Student</title>
+  <!--styles-->
+  <link href="css/main.css" rel="stylesheet">
+  <!--fonts google-->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Oswald|Quicksand" rel="stylesheet">
+</head>
+
+<body>
+  <div class='wrapper'>
+    <div class='sidebar'>
+      <div class='title'>
+        Code Sandbox
+      </div>
+      <ul class='nav'>
+        <li><a href="index.html">Home Page</a></li>
+        <li><a class="active" href="javascript.html">JavaScript Libraries</a></li>
+        <li><a href="ajax.html">Using AJAX</a></li>
+      </ul>
+    </div>
+
+    <section class='content isOpen'>
+      <a class='button'></a>
+      <h1>Javascript</h1>
+      <h2>Table Editting</h2>
+      <p class="description">This is an example of a adding and removing rows to a table using standard Javascript</p>
+      <br/>
+
+      <div class="librarySection">
+        <form class="main table" id="jsTable" onsubmit="event.preventDefault();">
+          <input class="inputTable" id="itemname" type="text" name="iname" placeholder="Team Name..." />
+          <input class="addBtn" id="BtnAddList" type="submit" value="Add" /><br />
+
+          <table class="col-2-table" id="itemlist">
+            <tr><td>Item</td><td>Remove</td></tr>
+          </table>
+        </form>
+      </div>
+      <br/>
+
+
+      <h1>JQuery</h1>
+      <h2>Table Editting</h2>
+      <p class="description">This is an example of a adding and removing rows using JQuery</p>
+      <br />
+      <form class="main table" id="jQueryTable" onsubmit="event.preventDefault();">
+        <input class="inputTable" id="jQueryitem" type="text" name="jqname" placeholder="Team Name..." />
+        <input class="addBtn" id="BtnAddJQuery" type="submit" value="Add" /><br />
+
+        <table class="col-2-table" id="jQuerylist">
+          <tr><td>Item</td><td>Remove</td></tr>
+        </table>
+      </form>
+      <br />
+
+
+
+
+      <h1>Knockout.JS</h1>
+      <h2>Table Editting</h2>
+      <p class="description">This is an example of a adding and removing rows using the Knockout.JS library.</p>
+      <br />
+      <form class="main table" data-bind="submit: addItem" onsubmit="event.preventDefault();">
+        <!--Binds a submit action to addItem-->
+        <input data-bind='value: itemToAdd, valueUpdate: "afterkeydown"' class="inputTable" placeholder="Team Name..."/>
+        <!--Binds the value of this input box to itemToAdd, and updates it whenever a key is pressed-->
+        <input class="addBtn" type="submit" data-bind="enable: itemToAdd().length > 0" value="Add"/ />
+        <!--Binds the button so that it becomes clickable once at least one character has been entered-->
+      </form>
+      <table>
+        <tbody data-bind="foreach:items">
+          <!--Runs a for each loop for the number of entries in the items Observable Array-->
+          <tr>
+            <td data-bind="text: $data"></td>
+            <!--Binds the text of this element to match the current item in the loop-->
+            <td><input type="button" data-bind="click:$parent.deleteItem" value="X"></td>
+            <!--Creates a button which is bound by click event to delete the parent item-->
+          </tr>
+        </tbody>
+      </table>
+
+
+
+      <h1>Vue.js</h1>
+      <h2>Table Editting</h2>
+      <p class="description">This is an example of a adding and removing rows to a table using the Vue.JS Library</p>
+      <br />
+
+
+      <form class="main" id="vueTable" onsubmit="event.preventDefault();">
+        <input class="inputTable" type="text" v-model="newTeam" placeholder="Team Name...">
+        <!--The v-model directive is used to create a two way data bind on an input. Anything entered in this box will save to newTeam-->
+        <input class="addBtn" type="submit" v-on:click="addTeam" value="Add"/>
+        <!--v-on is used to give an click event listener to this button, which will then call the addTeam method-->
+        <table v-for="(team, index) in teams">
+          <!--Creates a for loop for each team in the teams array, and also creates an index for each run-->
+          <tr><td>{{team}}</td><td><input class="removeBtn" @click="deleteTeam(index)" value="X"/> {{ index }} </td></tr>
+          <!--The v-text directive updates the textContent of the element with the selected value-->
+          <!--Alternative, interpolation can be used with =, in this case, showing the index number-->
+        </table>
+      </form>
+  </section>
+
+
+    <!--Javascript Files-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type='text/javascript' src='Scripts/knockout-3.4.2.js'></script>
+    <script type='text/javascript' src='Scripts/vue.min.js'></script>
+    <script src="js/tableList.js"></script>
+    <script src="js/nav.js"></script>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+{
+"jsTeams":[
+    {"teamName":"Alpha"},
+    {"teamName":"Beta"},
+    {"teamName":"Charlie"}
+],
+"jqTeams":[
+    {"teamName":"Red"},
+    {"teamName":"Blue"},
+    {"teamName":"Green"}
+],
+"koTeams":[
+    {"teamName":"Beards"},
+    {"teamName":"Moustaches"},
+    {"teamName":"Goatees"}
+],
+"vueTeams":[
+    {"teamName":"Washington"},
+    {"teamName":"Carolina"},
+    {"teamName":"Texas"}
+]
+}

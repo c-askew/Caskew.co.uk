@@ -1,0 +1,131 @@
+body {
+  margin: 0;
+  background: -webkit-linear-gradient(to right, #182848, #4b6cb7);
+  background: url(../images/dotOverlay.png) repeat, linear-gradient(to right, #182848, #4b6cb7);
+}
+
+.flex-grid {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+  text-align: center;
+}
+
+.col-thin {
+  min-width: 520px;
+  max-width: 520px;
+  margin: auto;
+}
+
+.col-1 {flex: 1;}
+.col-2 {flex: 2;}
+.col-3 {flex: 3;}
+
+#intro {
+  margin: auto;
+  height: 500px;
+}
+
+.bigText {
+  color: #c0eb7d;
+  font-family: 'Open Sans';
+  font-size: 3rem;
+  margin: 0 0 0 1.2rem;
+  font-weight: lighter;
+  text-transform: uppercase;
+}
+
+.lilText {
+  font-family: "Wire One";
+  font-size: 2rem;
+  color: #fff;
+  margin-top: -40px;
+}
+
+
+#about {
+  background: #fff;
+  min-height: 300px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.8) 2px 2px 5px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.8) 2px 2px 5px;
+  box-shadow: rgba(0, 0, 0, 0.8) 2px 2px 5px;
+}
+/*Cards*/
+.cardDeck {
+  width: 80%;
+  min-height: 100vh;
+  margin: auto;
+  text-align: center;
+}
+.cardDeck h1 {
+  font-family: 'Marvel';
+}
+.cardRow {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+}
+.cardSingle {
+  flex: 1;
+  margin: 2vh;
+  background: #333;
+  color: #fff;
+}
+.cardDouble {
+  flex: 2.14;
+  margin: 2vh;
+  background: #333;
+  color: #fff;
+}
+.cardShadows {
+  -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.2) inset;
+  -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.2) inset;
+  box-shadow:0 5px 20px rgba(0, 0, 0, 0.9), 0 0 80px rgba(0, 0, 0, 0.4) inset;
+}
+.focus {
+  font-family: 'Oswald';
+  margin: 15px;
+}
+.prefocus {
+  font-family: 'Oswald';
+  font-size: 1.2rem;
+  margin: 10px 0 ;
+}
+.subfocus {
+  font-family: 'Oswald';
+  margin-top: -1rem;
+}
+.longText {
+  font-size: 2.5rem;
+}
+.shortText {
+  font-size: 3.5rem;
+}
+.cardIcon{
+  margin-bottom: -15px;
+}
+
+.turquoise { color: #43d9be; }
+.turquoiseLight { color: #91f7e5; }
+.red { color: #fe6f5e; }
+.redLight { color: #f5887c;}
+.yellow { color: #f7d229;}
+.yellowLight { color: #f4d54f;}
+.purple { color: #9b4bd7; }
+.purpleLight { color: #b67be3; }
+.green { color: #50c878; }
+.greenLight { color: #73db96; }
+.blue { color: #4c77c8; }
+.blueLight { color: #7696d2; }
+.orange { color: #f69d3f; }
+.orangeLight { color: #f5a959; }
+.shiraz { color: #ba3162; }
+.shirazLight { color: #c46487; }
