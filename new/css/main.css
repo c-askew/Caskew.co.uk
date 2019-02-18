@@ -1,0 +1,16 @@
+@font-face {
+    font-family: 'radicalisregular';
+    src: url('radicalis.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background: #39354c;
+}
+
+.accentOrange { color: #e59c70; }
+
+#logo {
+    font-family: 'radicalisregular';
+}
