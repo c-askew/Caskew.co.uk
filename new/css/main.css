@@ -1,16 +1,54 @@
 @font-face {
     font-family: 'radicalisregular';
-    src: url('radicalis.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
+    src: url('../fonts/radicalis.woff2') format('woff2');
 }
 
 body {
     background: #39354c;
+    color: white;
+    width: 100%;
+    margin: 0;
 }
+
+h1 {
+    font-family: 'Aleo', serif;
+    font-size: 3.5em; 
+}
+
+p { 
+    font-family: 'Abel', serif;
+    font-size: 1.2em;
+}
+
+
+.scrollWrap {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: mandatory;
+    scroll-snap-points-x: repeat(100vw);
+    scroll-snap-type: x mandatory;
+}
+
+.scrollWrap::-webkit-scrollbar {width: 0 !important}
+
+section {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    width: calc(100vw - 40px);
+    height: 80vh;
+    /* background: #e59c70; */
+    margin: 0 20px;
+}
+
 
 .accentOrange { color: #e59c70; }
 
-#logo {
-    font-family: 'radicalisregular';
+.logo {
+    position: fixed;
+    bottom: 0%;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, 0%);
+    width: 300px;
 }
